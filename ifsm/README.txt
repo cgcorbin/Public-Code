@@ -125,13 +125,13 @@ change state from above:
 
 fsm.currentState.ChangeState("sub state key")
 
-Depending on how deep you want to build your state engines (they can get unruley 
+Depending on how deep you want to build your state tree (they can get unruley 
 past a certain point) you could have a line like this:
 fsm.currentState.currentState.currentState.currentState.ChangeState("sub state key")
 
-For situations like that I recommend instantiating another iFSM reference and using 
+For situations like that I recommend creating another iFSM reference and using 
 it like this:
-iFSM wayDeepState = fsm.currentState.currentState.currentState.currentState.ChangeState
+iFSM wayDeepState = fsm.currentState.currentState.currentState.currentState
 
 ***************************************
 Issues and Concerns:
